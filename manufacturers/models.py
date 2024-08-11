@@ -21,8 +21,6 @@ class Manufacturer(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True, editable=False, verbose_name='Дата создания')
 
-    product = models.ForeignKey('Product', on_delete=models.CASCADE, verbose_name="Производитель", **NULLABLE)
-
     # wholesalers = models.ManyToManyField(Wholesaler, blank=True, null=True, related_name="wholesalers")
 
     def __str__(self):
@@ -40,6 +38,8 @@ class Product(models.Model):
 
     price = models.PositiveIntegerField(verbose_name='Цена за покупку')
     created_at = models.DateTimeField(auto_now_add=True, editable=False, verbose_name='Дата выхода на рынок')
+
+    manufacturer = models.ForeignKey('Product', on_delete=models.CASCADE, verbose_name="Производитель", **NULLABLE)
 
     def __str__(self):
         return f'{self.name}'
