@@ -1,7 +1,7 @@
 
 from django.db import models
 
-# from wholesaler.models import Wholesaler
+from wholesaler.models import Wholesaler
 
 NULLABLE = {"blank": True, "null": True}
 
@@ -21,7 +21,7 @@ class Manufacturer(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True, editable=False, verbose_name='Дата создания')
 
-    # wholesalers = models.ManyToManyField(Wholesaler, blank=True, null=True, related_name="wholesalers")
+    wholesalers = models.ManyToManyField(Wholesaler, blank=True, related_name="wholesalers")
 
     def __str__(self):
         return f"Производитель: {self.name} (почта: {self.email})"

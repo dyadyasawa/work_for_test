@@ -1,7 +1,7 @@
 
 from django.db import models
 
-from manufacturers.models import Manufacturer
+# from manufacturers.models import Manufacturer
 
 
 class Wholesaler(models.Model):
@@ -14,7 +14,7 @@ class Wholesaler(models.Model):
     street = models.CharField(max_length=100, verbose_name="Улица")
     house = models.CharField(max_length=10, verbose_name="Дом")
 
-    supplier = models.ForeignKey(Manufacturer, on_delete=models.CASCADE, verbose_name="Поставщик")
+    # supplier = models.ForeignKey(Manufacturer, on_delete=models.CASCADE, verbose_name="Поставщик")
     debt = models.FloatField(verbose_name="Задолженность")
 
     created_at = models.DateTimeField(auto_now_add=True, editable=False, verbose_name='Дата создания')
