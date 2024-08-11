@@ -39,7 +39,7 @@ class Product(models.Model):
     price = models.PositiveIntegerField(verbose_name='Цена за покупку')
     created_at = models.DateTimeField(auto_now_add=True, editable=False, verbose_name='Дата выхода на рынок')
 
-    manufacturer = models.ForeignKey('Product', on_delete=models.CASCADE, verbose_name="Производитель", **NULLABLE)
+    manufacturer = models.ForeignKey('Manufacturer', on_delete=models.CASCADE, verbose_name="Производитель", **NULLABLE)
 
     def __str__(self):
         return f'{self.name}'
