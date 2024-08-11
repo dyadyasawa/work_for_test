@@ -23,3 +23,21 @@ class Manufacturer(models.Model):
     class Meta:
         verbose_name = "Производитель"
         verbose_name_plural = "Производители"
+
+
+class Product(models.Model):
+    name = models.CharField(max_length=100, verbose_name='Наименование')
+    description = models.TextField(verbose_name='Описание')
+    image = models.ImageField(upload_to='product/', verbose_name='Изображение', blank=True, null=True)
+
+    price = models.PositiveIntegerField(verbose_name='Цена за покупку')
+    created_at = models.DateTimeField(auto_now_add=True, editable=False, verbose_name='Дата выхода на рынок')
+
+    manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE, verbose_name="Производитель")
+
+    def __str__(self):
+        return f'{self.name}'
+
+    class Meta:
+        verbose_name = 'Товар'
+        verbose_name_plural = 'Товары'
