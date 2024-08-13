@@ -43,6 +43,7 @@ urlpatterns = [
     path("users/", include("users.urls", namespace="users")),
     path("manufacturers/", include("manufacturers.urls", namespace="manufacturers")),
     path("wholesaler/", include("wholesaler.urls", namespace="wholesaler")),
+    path("sellers/", include("sellers.urls", namespace="sellers")),
     path("debtors/", include("debtors.urls", namespace="debtors")),
 
     path("swagger<format>/", schema_view.without_ui(cache_timeout=0), name="schema-json"),
