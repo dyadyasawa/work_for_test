@@ -1,6 +1,7 @@
 
 from django.db import models
 
+from creditors.models import Creditor
 from wholesaler.models import Wholesaler
 
 NULLABLE = {"blank": True, "null": True}
@@ -17,7 +18,7 @@ class Seller(models.Model):
     house = models.CharField(max_length=10, verbose_name="Дом")
 
     wholesaler = models.ManyToManyField(Wholesaler, blank=True, related_name="wholesaler")
-    debt = models.FloatField(verbose_name="Задолженность", **NULLABLE)
+    creditors = models.ManyToManyField(Creditor, verbose_name="Кредиторы", blank=True, related_name="creditors_for_seller")
 
     created_at = models.DateTimeField(auto_now_add=True, editable=False, verbose_name='Дата создания')
 

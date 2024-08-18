@@ -50,8 +50,7 @@ INSTALLED_APPS = [
     "manufacturers",
     "wholesaler",
     "sellers",
-    "debtors",
-
+    "creditors",
 ]
 
 MIDDLEWARE = [

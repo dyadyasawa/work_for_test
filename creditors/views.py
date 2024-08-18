@@ -9,13 +9,13 @@ from rest_framework.generics import (
 
 from rest_framework.permissions import IsAuthenticated  # , AllowAny, IsCreator
 
-from sellers.models import Seller
-from sellers.serializers import SellerSerializer
+from creditors.models import Creditor
+from creditors.serializers import CreditorSerializer
 
 
-class SellerListApiView(ListAPIView):
-    queryset = Seller.objects.all()
-    serializer_class = SellerSerializer
+class CreditorListApiView(ListAPIView):
+    queryset = Creditor.objects.all()
+    serializer_class = CreditorSerializer
     # pagination_class = CustomPagination
     # permission_classes = (IsAuthenticated,)
 
@@ -25,9 +25,9 @@ class SellerListApiView(ListAPIView):
     #         return Manufacturer.objects.all()
 
 
-class SellerDetailApiView(RetrieveAPIView):
-    queryset = Seller.objects.all()
-    serializer_class = SellerSerializer
+class CreditorDetailApiView(RetrieveAPIView):
+    queryset = Creditor.objects.all()
+    serializer_class = CreditorSerializer
     # permission_classes = (IsAuthenticated,)
 
     # def get_queryset(self):
@@ -37,8 +37,8 @@ class SellerDetailApiView(RetrieveAPIView):
     #     return Manufacturer.objects.get(pk=pk)
 
 
-class SellerCreateApiView(CreateAPIView):
-    serializer_class = SellerSerializer
+class CreditorCreateApiView(CreateAPIView):
+    serializer_class = CreditorSerializer
     # permission_classes = (IsAuthenticated,)
 
     # def perform_create(self, serializer):
@@ -48,9 +48,9 @@ class SellerCreateApiView(CreateAPIView):
     #     new_manufacturer.save()
 
 
-class SellerUpdateApiView(UpdateAPIView):
-    queryset = Seller.objects.all()
-    serializer_class = SellerSerializer
+class CreditorUpdateApiView(UpdateAPIView):
+    queryset = Creditor.objects.all()
+    serializer_class = CreditorSerializer
     # permission_classes = (
     #     IsAuthenticated,
     #     IsCreator,
@@ -62,9 +62,9 @@ class SellerUpdateApiView(UpdateAPIView):
     #         return Manufacturer.objects.filter(pk=pk)
 
 
-class SellerDeleteApiView(DestroyAPIView):
-    queryset = Seller.objects.all()
-    serializer_class = SellerSerializer
+class CreditorDeleteApiView(DestroyAPIView):
+    queryset = Creditor.objects.all()
+    serializer_class = CreditorSerializer
     # permission_classes = (IsCreator,)
 
     # def get_queryset(self, pk):

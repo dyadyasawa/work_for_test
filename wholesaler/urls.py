@@ -16,11 +16,11 @@ app_name = WholesalerConfig.name
 
 urlpatterns = [
 
-    path("list/", WholesalerListApiView.as_view(), name="manufacturers-list"),
-    path("detail/<int:pk>/", WholesalerDetailApiView.as_view(), name="manufacturers-detail"),
-    path("create/", WholesalerCreateApiView.as_view(), name="manufacturers-create"),
-    path("update/<int:pk>/", WholesalerUpdateApiView.as_view(), name="manufacturers-update"),
-    path("delete/<int:pk>/", WholesalerDeleteApiView.as_view(), name="manufacturers-delete"),
+    path("list/", WholesalerListApiView.as_view(), name="wholesaler-list"),
+    path("detail/<int:pk>/", WholesalerDetailApiView.as_view(), name="wholesaler-detail"),
+    path("create/", WholesalerCreateApiView.as_view(), name="wholesaler-create"),
+    path("update/<int:pk>/", WholesalerUpdateApiView.as_view(), name="wholesaler-update"),
+    path("delete/<int:pk>/", WholesalerDeleteApiView.as_view(), name="wholesaler-delete"),
 
 ]
 

@@ -44,7 +44,7 @@ urlpatterns = [
     path("manufacturers/", include("manufacturers.urls", namespace="manufacturers")),
     path("wholesaler/", include("wholesaler.urls", namespace="wholesaler")),
     path("sellers/", include("sellers.urls", namespace="sellers")),
-    path("debtors/", include("debtors.urls", namespace="debtors")),
+    path("creditors/", include("creditors.urls", namespace="creditors")),
 
     path("swagger<format>/", schema_view.without_ui(cache_timeout=0), name="schema-json"),
     path("swagger/", schema_view.with_ui("swagger", cache_timeout=0), name="schema-swagger-ui"),

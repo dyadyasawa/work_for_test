@@ -1,6 +1,7 @@
 
 from django.db import models
 
+from creditors.models import Creditor
 from manufacturers.models import Manufacturer
 
 
@@ -15,7 +16,7 @@ class Wholesaler(models.Model):
     house = models.CharField(max_length=10, verbose_name="Дом")
 
     manufacturer = models.ManyToManyField(Manufacturer, blank=True, related_name="manufacturer")
-    debt = models.FloatField(verbose_name="Задолженность")
+    creditors = models.ManyToManyField(Creditor, verbose_name="Кредиторы", blank=True, related_name="creditors_for_wholesaler")
 
     created_at = models.DateTimeField(auto_now_add=True, editable=False, verbose_name='Дата создания')
 
