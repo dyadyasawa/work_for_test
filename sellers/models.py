@@ -20,8 +20,6 @@ class Seller(models.Model):
     wholesaler = models.ManyToManyField(Wholesaler, blank=True, related_name="wholesaler")
     creditors = models.ManyToManyField(Creditor, verbose_name="Кредиторы", blank=True, related_name="creditors_for_seller")
 
-    created_at = models.DateTimeField(auto_now_add=True, editable=False, verbose_name='Дата создания')
-
     def __str__(self):
         return f"Продавец: {self.name} (почта: {self.email})"
 

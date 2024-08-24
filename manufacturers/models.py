@@ -17,8 +17,6 @@ class Manufacturer(models.Model):
     supplier = models.CharField(max_length=100, verbose_name="Поставщик")
     debt = models.FloatField(verbose_name="Задолженность", **NULLABLE)
 
-    created_at = models.DateTimeField(auto_now_add=True, editable=False, verbose_name='Дата создания')
-
     def __str__(self):
         return f"Производитель: {self.name} (почта: {self.email})"
 

@@ -16,25 +16,12 @@ from manufacturers.serializers import ManufacturerSerializer
 class ManufacturerListApiView(ListAPIView):
     queryset = Manufacturer.objects.all()
     serializer_class = ManufacturerSerializer
-    # pagination_class = CustomPagination
-    # permission_classes = (IsAuthenticated,)
-
-    # def get_queryset(self):
-    #     user = self.request.user
-    #     if user.is_superuser:
-    #         return Manufacturer.objects.all()
+    filterset_fields = ("country",)
 
 
 class ManufacturerDetailApiView(RetrieveAPIView):
     queryset = Manufacturer.objects.all()
     serializer_class = ManufacturerSerializer
-    # permission_classes = (IsAuthenticated,)
-
-    # def get_queryset(self):
-    #     user = self.request.user
-    #     if user.is_superuser:
-    #     pk = kwargs("pk",)
-    #     return Manufacturer.objects.get(pk=pk)
 
 
 class ManufacturerCreateApiView(CreateAPIView):

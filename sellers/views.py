@@ -16,13 +16,7 @@ from sellers.serializers import SellerSerializer
 class SellerListApiView(ListAPIView):
     queryset = Seller.objects.all()
     serializer_class = SellerSerializer
-    # pagination_class = CustomPagination
-    # permission_classes = (IsAuthenticated,)
-
-    # def get_queryset(self):
-    #     user = self.request.user
-    #     if user.is_superuser:
-    #         return Manufacturer.objects.all()
+    filterset_fields = ("country",)
 
 
 class SellerDetailApiView(RetrieveAPIView):

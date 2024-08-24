@@ -8,7 +8,7 @@ from rest_framework.generics import (
     DestroyAPIView,
 )
 
-from rest_framework.permissions import IsAuthenticated  # , AllowAny, IsCreator
+from rest_framework.permissions import IsAuthenticated, IsAdminUser  # , AllowAny, IsCreator
 
 from wholesaler.models import Wholesaler
 from wholesaler.serializers import WholesalerSerializer
@@ -17,6 +17,7 @@ from wholesaler.serializers import WholesalerSerializer
 class WholesalerListApiView(ListAPIView):
     queryset = Wholesaler.objects.all()
     serializer_class = WholesalerSerializer
+    filterset_fields = ("country",)
     # pagination_class = CustomPagination
     # permission_classes = (IsAuthenticated,)
 
