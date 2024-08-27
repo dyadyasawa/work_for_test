@@ -33,7 +33,8 @@ class UserUpdateAPIView(UpdateAPIView):
     queryset = User.objects.all()
     permission_classes = (IsAdminUser,)
 
-    class UserDeleteAPIView(DestroyAPIView):
-        serializer_class = UserSerializer
-        queryset = User.objects.all()
-        permission_classes = (IsAdminUser,)
+
+class UserDeleteAPIView(DestroyAPIView):
+    serializer_class = UserSerializer
+    queryset = User.objects.all()
+    permission_classes = (IsAdminUser,)
