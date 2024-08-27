@@ -1,0 +1,47 @@
+[
+  {
+    "model": "manufacturers.manufacturer",
+    "pk": 1,
+    "fields": {
+      "name": "Ivanov&Petrov",
+      "description": "Производитель электроники",
+      "email": "ivanov&petrov@pochta.ru",
+      "country": "Japan",
+      "city": "Северный мыс",
+      "street": "Светлая",
+      "house": "13",
+      "supplier": "Недра планеты Земля",
+      "debt": 120.12
+    }
+  },
+  {
+    "model": "manufacturers.manufacturer",
+    "pk": 2,
+    "fields": {
+      "name": "Sidorov Inc",
+      "description": "Производитель электроники",
+      "email": "sidorov@pochta.ru",
+      "country": "China",
+      "city": "Южный мыс",
+      "street": "Темная",
+      "house": "13",
+      "supplier": "Заброшенная военная база",
+      "debt": 650.34
+    }
+  },
+  {
+    "model": "manufacturers.manufacturer",
+    "pk": 3,
+    "fields": {
+      "name": "Мир электроники",
+      "description": "Производитель электроники",
+      "email": "mir_electroniki@pochta.ru",
+      "country": "Russia",
+      "city": "Восточный мыс",
+      "street": "Серая",
+      "house": "13",
+      "supplier": "Соседний склад",
+      "debt": 234.89
+    }
+  }
+]

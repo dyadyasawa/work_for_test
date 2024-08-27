@@ -10,6 +10,13 @@ from manufacturers.views import (
     ManufacturerCreateApiView,
     ManufacturerUpdateApiView,
     ManufacturerDeleteApiView,
+
+    ProductListApiView,
+    ProductDetailApiView,
+    ProductCreateApiView,
+    ProductUpdateApiView,
+    ProductDeleteApiView,
+
 )
 
 
@@ -22,6 +29,12 @@ urlpatterns = [
     path("create/", ManufacturerCreateApiView.as_view(), name="manufacturers-create"),
     path("update/<int:pk>/", ManufacturerUpdateApiView.as_view(), name="manufacturers-update"),
     path("delete/<int:pk>/", ManufacturerDeleteApiView.as_view(), name="manufacturers-delete"),
+
+    path("product_list/", ProductListApiView.as_view(), name="product-list"),
+    path("product_detail/<int:pk>/", ProductDetailApiView.as_view(), name="product-detail"),
+    path("product_create/", ProductCreateApiView.as_view(), name="product-create"),
+    path("product_update/<int:pk>/", ProductUpdateApiView.as_view(), name="product-update"),
+    path("product_delete/<int:pk>/", ProductDeleteApiView.as_view(), name="product-delete"),
 
 ]
 

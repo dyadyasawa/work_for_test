@@ -1,0 +1,65 @@
+[
+  {
+    "model": "sellers.seller",
+    "pk": 1,
+    "fields": {
+      "name": "Зураб",
+      "description": "Вай, захады! Все что хочиш найды!",
+      "email": "zurab@pochta.ru",
+      "country": "Russia",
+      "city": "Зурабск",
+      "street": "Добрая",
+      "house": "11",
+      "wholesaler": [
+        2,
+        1
+      ],
+      "creditors": [
+        8,
+        9
+      ]
+    }
+  },
+  {
+    "model": "sellers.seller",
+    "pk": 2,
+    "fields": {
+      "name": "Электрохлам",
+      "description": "Всякая электроника почти даром!",
+      "email": "elektrohlam@pochta.ru",
+      "country": "Russia",
+      "city": "Верхнехламск",
+      "street": "Захламленная",
+      "house": "11",
+      "wholesaler": [
+        1,
+        3
+      ],
+      "creditors": [
+        11,
+        7
+      ]
+    }
+  },
+  {
+    "model": "sellers.seller",
+    "pk": 3,
+    "fields": {
+      "name": "Дом 11",
+      "description": "Втихаря продаем всякую электронику",
+      "email": "house11@pochta.ru",
+      "country": "Russia",
+      "city": "Тихий",
+      "street": "Спокойная",
+      "house": "11",
+      "wholesaler": [
+        2,
+        3
+      ],
+      "creditors": [
+        10,
+        12
+      ]
+    }
+  }
+]

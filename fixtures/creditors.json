@@ -1,0 +1,110 @@
+[
+  {
+    "model": "creditors.creditor",
+    "pk": 1,
+    "fields": {
+      "creditor": "Мир электроники",
+      "debtor": "Склад №1",
+      "amount": 15.07
+    }
+  },
+  {
+    "model": "creditors.creditor",
+    "pk": 2,
+    "fields": {
+      "creditor": "Мир электроники",
+      "debtor": "ОптТехника",
+      "amount": 340.25
+    }
+  },
+  {
+    "model": "creditors.creditor",
+    "pk": 3,
+    "fields": {
+      "creditor": "Ivanov&Petrov",
+      "debtor": "ОптТехника",
+      "amount": 270.05
+    }
+  },
+  {
+    "model": "creditors.creditor",
+    "pk": 4,
+    "fields": {
+      "creditor": "Ivanov&Petrov",
+      "debtor": "Техноторг",
+      "amount": 95.1
+    }
+  },
+  {
+    "model": "creditors.creditor",
+    "pk": 5,
+    "fields": {
+      "creditor": "Sidorov Inc",
+      "debtor": "Склад №1",
+      "amount": 54.75
+    }
+  },
+  {
+    "model": "creditors.creditor",
+    "pk": 6,
+    "fields": {
+      "creditor": "Sidorov Inc",
+      "debtor": "Техноторг",
+      "amount": 38.2
+    }
+  },
+  {
+    "model": "creditors.creditor",
+    "pk": 7,
+    "fields": {
+      "creditor": "Склад №1",
+      "debtor": "Электрохлам",
+      "amount": 42.35
+    }
+  },
+  {
+    "model": "creditors.creditor",
+    "pk": 8,
+    "fields": {
+      "creditor": "Склад №1",
+      "debtor": "Зураб",
+      "amount": 23.11
+    }
+  },
+  {
+    "model": "creditors.creditor",
+    "pk": 9,
+    "fields": {
+      "creditor": "ОптТехника",
+      "debtor": "Зураб",
+      "amount": 78.5
+    }
+  },
+  {
+    "model": "creditors.creditor",
+    "pk": 10,
+    "fields": {
+      "creditor": "ОптТехника",
+      "debtor": "Дом 11",
+      "amount": 92.2
+    }
+  },
+  {
+    "model": "creditors.creditor",
+    "pk": 11,
+    "fields": {
+      "creditor": "Техноторг",
+      "debtor": "Электрохлам",
+      "amount": 145.32
+    }
+  },
+  {
+    "model": "creditors.creditor",
+    "pk": 12,
+    "fields": {
+      "creditor": "Техноторг",
+      "debtor": "Дом 11",
+      "amount": 61.4
+    }
+  }
+]

@@ -7,8 +7,7 @@ from rest_framework.generics import (
     DestroyAPIView,
 )
 
-from rest_framework.permissions import IsAdminUser, IsAuthenticated  # , AllowAny
-
+from rest_framework.permissions import IsAdminUser, IsAuthenticated  # AllowAny
 from creditors.models import Creditor
 from creditors.serializers import CreditorSerializer
 
@@ -33,10 +32,10 @@ class CreditorCreateApiView(CreateAPIView):
 class CreditorUpdateApiView(UpdateAPIView):
     queryset = Creditor.objects.all()
     serializer_class = CreditorSerializer
-    permission_classes = (IsAuthenticated, IsAdminUser,)
+    permission_classes = (IsAdminUser,)
 
 
 class CreditorDeleteApiView(DestroyAPIView):
     queryset = Creditor.objects.all()
     serializer_class = CreditorSerializer
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAdminUser,)

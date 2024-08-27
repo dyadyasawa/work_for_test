@@ -34,7 +34,7 @@ class SellerCreateApiView(CreateAPIView):
 class SellerUpdateApiView(UpdateAPIView):
     queryset = Seller.objects.all()
     serializer_class = SellerSerializer
-    permission_classes = (IsAuthenticated, IsAdminUser,)
+    permission_classes = (IsAdminUser,)
 
 
 class SellerDeleteApiView(DestroyAPIView):

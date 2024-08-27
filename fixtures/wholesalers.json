@@ -1,0 +1,65 @@
+[
+  {
+    "model": "wholesaler.wholesaler",
+    "pk": 1,
+    "fields": {
+      "name": "ОптТехника",
+      "description": "Электроника оптом и в розницу",
+      "email": "opttech@pochta.ru",
+      "country": "Japan",
+      "city": "Приморск",
+      "street": "Длинная",
+      "house": "12",
+      "manufacturer": [
+        1,
+        2
+      ],
+      "creditors": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "model": "wholesaler.wholesaler",
+    "pk": 2,
+    "fields": {
+      "name": "Склад №1",
+      "description": "Электроника оптом и в розницу",
+      "email": "sklad@pochta.ru",
+      "country": "Russia",
+      "city": "Пригорск",
+      "street": "Короткая",
+      "house": "12",
+      "manufacturer": [
+        3,
+        1
+      ],
+      "creditors": [
+        1,
+        5
+      ]
+    }
+  },
+  {
+    "model": "wholesaler.wholesaler",
+    "pk": 3,
+    "fields": {
+      "name": "Техноторг",
+      "description": "Электроника оптом и в розницу",
+      "email": "techtorg@pochta.ru",
+      "country": "China",
+      "city": "Приозерск",
+      "street": "Средняя",
+      "house": "12",
+      "manufacturer": [
+        3,
+        2
+      ],
+      "creditors": [
+        4,
+        6
+      ]
+    }
+  }
+]

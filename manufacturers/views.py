@@ -7,54 +7,68 @@ from rest_framework.generics import (
     DestroyAPIView,
 )
 
-from rest_framework.permissions import IsAuthenticated  # , AllowAny, IsCreator
+from rest_framework.permissions import IsAuthenticated, IsAdminUser  # , AllowAny
 
-from manufacturers.models import Manufacturer
-from manufacturers.serializers import ManufacturerSerializer
+from manufacturers.models import Manufacturer, Product
+from manufacturers.serializers import ManufacturerSerializer, ProductSerializer
+
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
 
 class ManufacturerListApiView(ListAPIView):
     queryset = Manufacturer.objects.all()
     serializer_class = ManufacturerSerializer
     filterset_fields = ("country",)
+    permission_classes = (IsAuthenticated, IsAdminUser,)
 
 
 class ManufacturerDetailApiView(RetrieveAPIView):
     queryset = Manufacturer.objects.all()
     serializer_class = ManufacturerSerializer
+    permission_classes = (IsAuthenticated, IsAdminUser,)
 
 
 class ManufacturerCreateApiView(CreateAPIView):
     serializer_class = ManufacturerSerializer
-    # permission_classes = (IsAuthenticated,)
-
-    # def perform_create(self, serializer):
-    #     """Делаем текущего пользователя 'Создателем' Производителя."""
-    #     new_manufacturer = serializer.save()
-    #     new_manufacturer.creator = self.request.user
-    #     new_manufacturer.save()
+    permission_classes = (IsAuthenticated, IsAdminUser,)
 
 
 class ManufacturerUpdateApiView(UpdateAPIView):
     queryset = Manufacturer.objects.all()
     serializer_class = ManufacturerSerializer
-    # permission_classes = (
-    #     IsAuthenticated,
-    #     IsCreator,
-    # )
-
-    # def get_queryset(self, pk):
-    #     user = self.request.user
-    #     if user.is_authenticated:
-    #         return Manufacturer.objects.filter(pk=pk)
+    permission_classes = (IsAdminUser,)
 
 
 class ManufacturerDeleteApiView(DestroyAPIView):
     queryset = Manufacturer.objects.all()
     serializer_class = ManufacturerSerializer
-    # permission_classes = (IsCreator,)
+    permission_classes = (IsAdminUser,)
 
-    # def get_queryset(self, pk):
-    #     user = self.request.user
-    #     if user.is_authenticated:
-    #         return Manufacturer.objects.filter(pk=pk)
+
+class ProductListApiView(ListAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+    permission_classes = (IsAuthenticated, IsAdminUser,)
+
+
+class ProductDetailApiView(RetrieveAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+    permission_classes = (IsAuthenticated, IsAdminUser,)
+
+
+class ProductCreateApiView(CreateAPIView):
+    serializer_class = ProductSerializer
+    permission_classes = (IsAuthenticated, IsAdminUser,)
+
+
+class ProductUpdateApiView(UpdateAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+    permission_classes = (IsAdminUser,)
+
+
+class ProductDeleteApiView(DestroyAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+    permission_classes = (IsAdminUser,)
